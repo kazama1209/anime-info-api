@@ -67,4 +67,3 @@ $ aws cloudformation deploy --template-file serverless-output.yaml \
 「Successfully」と表示されればデプロイ成功。
 
 AWSコンソール画面から「Lambda」→「関数」と進むと先ほどデプロイした内容が表示されるので、「API Gateway」内に記載されているAPIエンドポイント（例https://********.execute-api.ap-northeast-1.amazonaws.com/Prod/api/anime_details?tid=2077）にアクセスし、無事レスポンスが返ってくればOK。
-: 
