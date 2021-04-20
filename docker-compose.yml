@@ -1,0 +1,19 @@
+version: "3"
+services:
+  app:
+    image: amazon/aws-sam-cli-build-image-ruby2.5
+    volumes:
+      - .:/var/task
+    command:
+      - /bin/bash
+      - -c
+      - |
+        shopt -s extglob
+
+        mkdir -p ./.deploy
+        cd .deploy
+
+        ls | grep -v -e vendor | xargs -r rm -fr
+        cp -r /var/task/!(vendor) /var/task/.deploy
+
+        bundle install --path="vendor/bundle"

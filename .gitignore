@@ -1,0 +1,9 @@
+.bundle
+.deploy
+.ruby-version
+vendor/
+serverless-output.yaml
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+terraform.tfvars
